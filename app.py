@@ -17,7 +17,7 @@ impressions_open = False
 
 @app.route('/')
 def submissions_list():
-    return render_template("about.html")
+    return render_template("index.html")
 
 class SubmitForm(Form):
     bms_name = TextField("Title", validators=[DataRequired()])
@@ -62,9 +62,9 @@ def handle_bms_submission():
 def evt_admin():
     return "evt admin"
 
-@app.route("/about/")
+@app.route("/index/")
 def evt_about():
-    return render_template("about.html")
+    return render_template("index.html")
 
 @app.route("/rules/")
 def evt_rules():
